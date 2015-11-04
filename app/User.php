@@ -9,8 +9,10 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Jenssegers\Mongodb\Model as Eloquent;
 
-class User extends Model implements AuthenticatableContract,
+
+class User extends Eloquent implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
 {
@@ -21,7 +23,8 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var string
      */
-    protected $table = 'users';
+//    protected $table = 'users';
+    protected $collection='users';
 
     /**
      * The attributes that are mass assignable.
