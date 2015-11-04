@@ -3,9 +3,9 @@
 
     angular
         .module('app.controllers')
-        .controller('{{StudlyName}}Ctrl',{{StudlyName}}Ctrl);
+        .controller('HomeCtrl',HomeCtrl);
 
-     function {{StudlyName}}Ctrl(){
+     function HomeCtrl(){
         //
     }
 
