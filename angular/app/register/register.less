@@ -1,110 +1,8 @@
-body {
-  background: #f2f2f2;
-}
-md-input-container .md-input {
-  border-style: solid;
-}
-.Page {
-  background: transparent;
-}
-.Page .Page-Container {
-  background: transparent;
-  padding: 8px 16px;
-}
-.Page .Page-Container md-card {
-  width: 940px;
-}
-.Page .Page-Container md-card md-toolbar:first-child {
-  border-radius: 3px 3px 0 0;
-}
-.Page .Page-Container md-card md-card-content.language-markup {
-  padding: 8px 0 0 0;
-}
-.Page .Page-Container md-card md-card-content li {
-  line-height: 26px;
-}
-@media (max-width: 1240px) {
-  .Page .Page-Container md-card {
-    width: 100%;
-  }
-}
-.Page .Page-Container pre[class*="language-"] {
-  border-radius: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-md-toast[md-theme=warn] {
-  background-color: #F44336;
-  border-radius: 2px;
-}
-
-[ui-view].ng-enter,
-[ui-view].ng-leave {
-  transition: opacity ease-in-out 200ms;
-}
-[ui-view].ng-enter,
-[ui-view].ng-leave.ng-leave-active {
-  opacity: 0;
-}
-[ui-view].ng-enter.ng-enter-active {
-  opacity: 1;
-}
-.Page.ng-leave.ng-leave-active {
-  display: none;
-}
-
-.u-center {
-  text-align: center;
-}
-
-.Header {
-  z-index: 3;
-}
-.Header button:first-child {
-  padding-top: 6px;
-}
-.md-button {
-  color: currentColor;
-}
-.md-button:not([disabled]):hover {
-  background-color: rgba(158, 158, 158, 0.2);
-}
-.md-button[disabled] {
-  color: rgba(0, 0, 0, 0.26);
-  background-color: transparent;
-}
-
-
-.Landing-CallToAction {
-  text-align: center;
-}
-.Landing-flex {
-  min-height: 50px;
-  padding: 5px;
-  color: white;
-}
-.Landing-flex33 {
-  background-color: #009688;
-}
-.Landing-flex55 {
-  background-color: #3949ab;
-}
-.Landing-flexRemaining {
-  background-color: #9c27b0;
-}
-.Landing-demoIcon {
-  fill: #009688;
-  position: relative;
-  top: 4px;
-  left: 5px;
-}
-
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 *:focus {
   outline: none;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -114,6 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+
 #login-box {
   position: relative;
   margin: 5% auto;
@@ -123,6 +22,7 @@ body {
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
+
 .left {
   position: absolute;
   top: 0;
@@ -132,11 +32,13 @@ body {
   width: 300px;
   height: 400px;
 }
+
 h1 {
   margin: 0 0 20px 0;
   font-weight: 300;
   font-size: 28px;
 }
+
 input[type="text"],
 input[type="password"] {
   display: block;
@@ -152,12 +54,14 @@ input[type="password"] {
   font-size: 15px;
   transition: 0.2s ease;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus {
   border-bottom: 2px solid #16a085;
   color: #16a085;
   transition: 0.2s ease;
 }
+
 input[type="submit"] {
   margin-top: 28px;
   width: 120px;
@@ -172,17 +76,20 @@ input[type="submit"] {
   transition: 0.1s ease;
   cursor: pointer;
 }
+
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   opacity: 0.8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
 }
+
 input[type="submit"]:active {
   opacity: 1;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
 }
+
 .or {
   position: absolute;
   top: 180px;
@@ -195,6 +102,7 @@ input[type="submit"]:active {
   line-height: 40px;
   text-align: center;
 }
+
 .right {
   position: absolute;
   top: 0;
@@ -208,6 +116,7 @@ input[type="submit"]:active {
   background-position: center;
   border-radius: 0 2px 2px 0;
 }
+
 .right .loginwith {
   display: block;
   margin-bottom: 40px;
@@ -215,6 +124,7 @@ input[type="submit"]:active {
   color: #FFF;
   text-align: center;
 }
+
 button.social-signin {
   margin-bottom: 20px;
   width: 220px;
@@ -227,73 +137,26 @@ button.social-signin {
   transition: 0.2s ease;
   cursor: pointer;
 }
+
 button.social-signin:hover,
 button.social-signin:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   transition: 0.2s ease;
 }
+
 button.social-signin:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.2s ease;
 }
+
 button.social-signin.facebook {
   background: #32508E;
 }
+
 button.social-signin.twitter {
   background: #55ACEE;
 }
+
 button.social-signin.google {
   background: #DD4B39;
 }
-
-
-.Sidebar {
-  background-color: #3f51b5;
-  white-space: nowrap;
-}
-.Sidebar,
-.Sidebar.md-locked-open-add-active,
-.Sidebar.md-locked-open {
-  width: 250px;
-  min-width: 250px;
-  max-width: 250px;
-}
-.Sidebar-header {
-  min-height: inherit;
-}
-.Sidebar-title {
-  font-size: 25px;
-  height: 100px;
-  max-height: 100px;
-  text-align: center;
-  font-weight: 500;
-}
-.Sidebar-pages {
-  background-color: #3f51b5;
-  color: white;
-}
-.Sidebar-pages md-list md-list-item button.md-button:not([disabled]):hover {
-  background-color: rgba(158, 158, 158, 0.2) !important;
-}
-.Sidebar-page {
-  cursor: pointer;
-}
-.Sidebar-page md-list-item {
-  /*IE centering fix*/
-  height: 48px;
-}
-.Sidebar-page.active {
-  background-color: rgba(158, 158, 158, 0.3) !important;
-}
-.Sidebar-version {
-  margin: 0 0 20px 0;
-  text-align: center;
-  font-weight: normal;
-}
-.Sidebar-version a {
-  color: white;
-  text-decoration: none;
-}
-
-
-/*# sourceMappingURL=app.css.map */

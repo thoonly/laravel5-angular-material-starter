@@ -10,21 +10,27 @@
     <!--[if lte IE 10]>
     <script type="text/javascript">document.location.href = '/unsupported-browser'</script>
     <![endif]-->
+    <style>
+        /*[ng\:cloak], [ng-cloak],*/
+        /*.ng-cloak { display: none; }*/
+    </style>
 </head>
-<body layout="row">
+<body layout="row" >
 
 <!-- Sidenav component -->
 <md-sidenav
         class="Sidebar md-sidenav-left md-whiteframe-z2"
         md-component-id="left"
-        md-is-locked-open="$mdMedia('gt-md')"
+        {{--md-is-locked-open="$mdMedia('gt-md')"--}}
+
         tabindex="-1">
 
     <!-- Sidebar header/branding -->
     <md-toolbar class="Sidebar-header">
         <h1 class="md-toolbar-tools Sidebar-title">Laravel 5 angular<br>material starter</h1>
         <h6 class="Sidebar-version">
-            <a target="_blank" href="https://github.com/jadjoubran/laravel5-angular-material-starter/releases">version 3 - alpha</a>
+            <a target="_blank" href="https://github.com/jadjoubran/laravel5-angular-material-starter/releases">version 3
+                - alpha</a>
         </h6>
     </md-toolbar>
 
@@ -34,11 +40,20 @@
             ui-view="sidebar"
             ng-controller="SidebarCtrl">
     </md-content>
+
+</md-sidenav>
+
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right"  >
+
+    <md-content ui-view="rightbar" ng-controller="RightbarCtrl as rightbar" layout-padding>
+
+    </md-content>
+
 </md-sidenav>
 
 <div flex role="main" layout="column" tabindex="-1">
     <md-toolbar class="Header md-accent md-whiteframe-z1" layout="column">
-        <div ui-view="header" ng-controller="HeaderCtrl"></div>
+        <div ui-view="header" ng-controller="HeaderCtrl as header"></div>
     </md-toolbar>
     <md-content layout="column" flex md-scroll-y>
         <div ui-view="main" class="Page"></div>

@@ -13,7 +13,7 @@
 
 
 	angular.module('app.routes', ['ui.router', 'ngStorage', 'satellizer']);
-	angular.module('app.controllers', ['ui.router', 'ngMaterial', 'ngStorage', 'restangular', 'ngMdIcons', 'angular-loading-bar']);
+	angular.module('app.controllers', ['ui.router', 'ngMaterial', 'ngStorage', 'restangular', 'ngMdIcons', 'angular-loading-bar','ngMessages','validation.match']);
 	angular.module('app.filters', []);
 	angular.module('app.services', ['ui.router', 'ngStorage', 'restangular']);
 	angular.module('app.directives', []);
