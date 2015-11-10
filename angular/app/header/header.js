@@ -25,10 +25,10 @@
 
         function openSideNav() {
             $mdSidenav('left').open();
-        };
+        }
         function toggleRight() {
             $mdSidenav('right').open();
-        };
+        }
 
 
         function showRegister(ev) {
@@ -44,7 +44,7 @@
                 }, function () {
                     $scope.status = 'You cancelled the dialog.';
                 });
-        };
+        }
 
         function DialogCtrl($mdDialog){
             var vm=this;
@@ -54,14 +54,14 @@
 
             function hide() {
                 $mdDialog.hide();
-            };
+            }
             function cancle() {
                 $mdDialog.cancel();
-            };
+            }
             function answer(answer) {
                 $mdDialog.hide(answer);
-            };
+            }
         }
-    };
+    }
 
 })();

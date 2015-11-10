@@ -1,7 +1,7 @@
 <md-dialog class="Page-Container" ng-controller="RegisterCtrl as register">
     <div id="login-box">
         <!--<div class="left">-->
-        <h1>Register </h1>
+        <h1>Register1 </h1>
 
 
         <!--<form name="myForm">-->
@@ -14,27 +14,31 @@
             <input type="text" name="username" placeholder="Username"/>
             <input type="text" ng-model="register.email" name="email" placeholder="E-mail"/>
             <input type="password" ng-model="register.password" name="password" placeholder="Password" required/>
-            <input type="password" ng-model="register.password2" name="password2" placeholder="Retype password" match="register.password"/>
+            <input type="password" ng-model="register.password2" name="password2" placeholder="Retype password"
+                   />
 
-            <div ng-messages="registerform.name.$error" ng-if="registerform.password2.$dirty" class="error-messages slide-right">
-                <div ng-message="required" class="message slide-left">You did not enter a field name </div>
-                <div ng-message="registerform.password2.$error.match" class="message slide-left">Your passwords did not  match </div>
+            <div ng-messages="registerform.name.$error" ng-if="registerform.password2.$dirty"
+                 class="error-messages slide-right">
+                <div ng-message="required" class="message slide-left">You did not enter a field name</div>
+                <div ng-message="registerform.password2.$error.match" class="message slide-left">Your passwords did not
+                    match
+                </div>
             </div>
-            <div ng-hide="!register.password2.length">Your passwords did not match</div>
+            <div ng-show="register.password2.length">Your passwords did not match</div>
 
             <input type="submit" name="signup_submit" value="Sign me up"/>
         </form>
+        <input ng-model="register.passwd"/>
 
-
+        <div ng-show="register.passwd.length">Your passwords did not match</div>
         <!--</div>-->
 
-        <!--<div class="right">-->
-        <!--<span class="loginwith">Sign in with<br/>social network</span>-->
-
-        <!--<button class="social-signin facebook">Log in with facebook</button>-->
-        <!--<button class="social-signin twitter">Log in with Twitter</button>-->
-        <!--<button class="social-signin google">Log in with Google+</button>-->
-        <!--</div>-->
-        <!--<div class="or">OR</div>-->
+        <div class="right">
+        <span class="loginwith">Sign in with<br/>social network</span>
+        <button class="social-signin facebook">Log in with facebook</button>
+        <button class="social-signin twitter">Log in with Twitter</button>
+        <button class="social-signin google">Log in with Google+</button>
+        </div>
+        <div class="or">OR</div>
     </div>
 </md-dialog>
